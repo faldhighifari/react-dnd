@@ -14,6 +14,9 @@ import Select from 'react-select'
 //   <Select options={options} />
 // )
 
+const box = ['box select 1', 'box select 2 ', 'box select 3']
+
+
 export default function App() {
   return (
     <div className="App drag_things_to_boxes">
@@ -24,13 +27,12 @@ export default function App() {
       </div>
 
       <div className="things_to_drag">
-        <Boxable targetKey="box" label="bana1nas" image="img/banana.png" />
+        <Boxable targetKey="box" label={box[0]} />
         <Boxable
           targetKey="box"
-          label="cheeseburger"
-          image="img/surprise.png"
+          label={box[1]}
         />
-        <Boxable targetKey="box" label="orange" image="img/orange.png" />
+        <Boxable targetKey="box" label={box[2]} />
       </div>
 
       {/* <Select options={options} /> */}

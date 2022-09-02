@@ -1,8 +1,16 @@
 import React from "react";
 import { DragDropContainer, DropTarget } from "react-drag-drop-container";
+import Select from 'react-select'
+
 
 export default function BoxItem(props) {
   const { swap, kill, children, label, index, uid } = props;
+
+  const options = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' }
+  ]
 
   const handleDrop = (e) => {
     console.log("BoxItem handleDrop ", e);
@@ -26,12 +34,11 @@ export default function BoxItem(props) {
         dragHandleClassName="grabber"
       >
         <DropTarget onHit={handleDrop} targetKey="boxItem">
-          <div className="outer">
             <div className="item">
               <span className="grabber">&#8759;</span>
-              {children}
+              <Select options={options} />
+              {/* {children} */}
             </div>
-          </div>
         </DropTarget>
       </DragDropContainer>
     </div>
