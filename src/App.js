@@ -1,6 +1,6 @@
 import "./styles.css";
 import React from "react";
-import Boxable from "./Boxable";
+import SelectBox from "./SelectBox";
 import Box from "./Box";
 import Select from 'react-select'
 
@@ -27,12 +27,12 @@ export default function App() {
       </div>
 
       <div className="things_to_drag">
-        <Boxable targetKey="box" label={box[0]} />
-        <Boxable
+        <SelectBox targetKey="box" label={box[0]} />
+        <SelectBox
           targetKey="box"
           label={box[1]}
         />
-        <Boxable targetKey="box" label={box[2]} />
+        <SelectBox targetKey="box" label={box[2]} />
       </div>
 
       {/* <Select options={options} /> */}

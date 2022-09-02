@@ -2,10 +2,10 @@ import React from "react";
 import { DragDropContainer } from "react-drag-drop-container";
 import Select from 'react-select'
 /*
-    Boxable -- a thing you can drag into a Box
+    SelectBox -- a thing you can drag into a Box
 */
 
-export default function Boxable(props) {
+export default function SelectBox(props) {
 
   const options = [
     { value: 'chocolate', label: 'Chocolate' },
@@ -17,7 +17,7 @@ export default function Boxable(props) {
   
   const { targetKey, label, image, customDragElement } = props;
   return (
-    <div className="boxable_component" style={{ display: "inline-block" , marginRight: '0.8rem'}}>
+    <div style={{ display: "inline-block" , marginRight: '0.8rem'}}>
       <DragDropContainer
         targetKey={targetKey}
         dragData={{ label: label }}

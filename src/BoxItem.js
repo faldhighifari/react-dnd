@@ -35,7 +35,7 @@ export default function BoxItem(props) {
       >
         <DropTarget onHit={handleDrop} targetKey="boxItem">
             <div className="item">
-              <span className="grabber">&#8759;</span>
+              <span className="grabber">{label}</span>
               <Select options={options} />
               {/* {children} */}
             </div>
